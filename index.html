@@ -47,11 +47,12 @@
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
     const processLearnersLoop = (learners) => {
-      for (let arr in learners){
-        if (arr.lovesJS === 0){
-        const learner = learners[arr];
+      for (let index in learners){
+        const learner = learners[index];
+        // processSingleLearner(learner);
+        if (learner.lovesJS === 0){
         learner.lovesJS = false;
-      } else if (arr.lovesJS === 1){
+      } else if (learner.lovesJS === 1){
           learner.lovesJS = true;
       }
       }
